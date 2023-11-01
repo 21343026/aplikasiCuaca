@@ -35,7 +35,7 @@ app.get('/bantuan', (req, res) =>{
     res.render('bantuan', {
         judul : 'Halaman Bantuan',
         Nama : 'Indah Chania',
-        teksBantuan : 'ini adalah teks bantuan'
+        teksBantuan : 'Ini adalah halaman bantuan'
     });
 });
 
