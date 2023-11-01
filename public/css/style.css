@@ -1,6 +1,6 @@
 body {
     background-color: #dfebf6;
-    color: #aac7d8;
+    color: #44576d;
     font-family: Arial, sans-serif;
     max-width: 650px;
     margin: 0 auto;
@@ -61,5 +61,5 @@ button {
 }
 
 button:hover {
-    background: #44576d; /* Ubah warna saat mengarahkan kursor */
+    background: #6480a0; /* Ubah warna saat mengarahkan kursor */
 }
