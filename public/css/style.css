@@ -42,7 +42,7 @@ footer{
 header {
     margin-top: 16px;
     margin-bottom: 48px;
-    display: flex;
+    display:block;
     align-items: right;
 }
 
