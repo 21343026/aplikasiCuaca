@@ -32,7 +32,7 @@ app.get('', (req, res) => {
 
 //ini halaman bantuan/FAQ (Frequently Asked Questions)
 app.get('/bantuan', (req, res) =>{
-    res.render('index', {
+    res.render('bantuan', {
         judul : 'Halaman Bantuan',
         Nama : 'Indah Chania',
         teksBantuan : 'ini adalah teks bantuan'
