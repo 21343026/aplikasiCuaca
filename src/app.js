@@ -5,6 +5,7 @@ const { error } = require('console')
 const forecast = require('./utils/prediksiCuaca')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Mendefinisikan jalur/path untuk konfigurasi express
 const direktoriPublic = path.join(__dirname,'../public')
@@ -80,6 +81,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(5000, () => {
-    console.log('Server berjalan pada port 5000.')
+app.listen(port, () => {
+    console.log('Server berjalan pada port '+ port)
 })
