@@ -76,31 +76,28 @@ app.get('/tentang', (req, res) =>{
 
 //halaman berita
 app.get('/berita', (req, res) => {
+    const apiKey = 'a3f483f912b4cb69ff55457fb4ea987a'; 
+    const searchQuery = 'a'; 
 
-    axios.get('https://api.mediastack.com/v1/news', {
-        params: {
-            access_key: 'a3f483f912b4cb69ff55457fb4ea987a',
-            keywords: 'berita'
-        }
-    })
-    .then((response) => {
-        const berita = response.data.data;
-        
-        res.render('berita', {
-            judul: 'Berita',
-            Nama: 'Indah Chania',
-            berita: berita
+    // Lakukan permintaan ke API
+    axios.get(`http://api.mediastack.com/v1/sources?access_key=${apiKey}&search=${searchQuery}`)
+        .then((response) => {
+            const dataBerita = response.data; // Mengambil data berita dari respons API
+
+            res.render('berita', {
+                judul: 'Berita',
+                Nama: 'Indah Chania',
+                berita: dataBerita // Mengirimkan data berita ke halaman 'berita'
+            });
+        })
+        .catch((error) => {
+            console.error('Terjadi kesalahan dalam permintaan API berita:', error);
+            res.render('berita', {
+                judul: 'Berita',
+                Nama: 'Indah Chania',
+                berita: [] // Mengirimkan array kosong jika terjadi kesalahan
+            });
         });
-    })
-    .catch((error) => {
-        // Kesalahan ketika mengambil data berita dari API
-        console.error('Error:', error);
-        res.render('berita', {
-            judul: 'Berita',
-            Nama: 'Indah Chania',
-            berita: [] // Berita kosong
-        });
-    });
 });
 
 app.get('*', (req, res) => {
