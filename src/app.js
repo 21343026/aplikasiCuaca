@@ -77,7 +77,7 @@ app.get('/tentang', (req, res) =>{
 //halaman berita
 app.get('/berita', (req, res) => {
     const apiKey = 'a3f483f912b4cb69ff55457fb4ea987a'; 
-    const searchQuery = 'a'; 
+    const searchQuery = 'abc'; 
 
     // Lakukan permintaan ke API
     axios.get(`http://api.mediastack.com/v1/sources?access_key=${apiKey}&search=${searchQuery}`)
