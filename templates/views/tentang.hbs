@@ -9,21 +9,26 @@
 <body>
     <div class="main-content">
         {{>header}}
-        <img class="potrait" src="/img/photo.png">
-        <h2>Biodata Diri</h2>
-        <ul>
-            <p>Nama : Indah Chania</p>
-            <p>TTL  : Padang, 2 April 2003</p>
-            <p>Asal : Padang, Sumatera Barat</p>
-        </ul>
-        <br>
+        <div class="profile">
+            <img class="potrait" src="/img/photo.png">
+            <div class="text">
+                <h2>Biodata Diri</h2>
+                <ul>
+                    <p>Nama : Indah Chania</p>
+                    <p>TTL  : Padang, 2 April 2003</p>
+                    <p>Asal : Padang, Sumatera Barat</p>
+                </ul>
+            </div>
+        </div>
 
-        <h2>Pendidikan</h2>
-        <ul>
-            <p>Universitas Negeri Padang (2021 - Sekarang)</p>
-            <p>SMA Negeri 9 Padang (2018 - 2021)</p>
-            <p>SMP Negeri 31 Padang (2015 - 2018)</p>
-        </ul>
+        <div class="education">
+            <h2>Pendidikan</h2>
+            <ul>
+                <p>Universitas Negeri Padang (2021 - Sekarang)</p>
+                <p>SMA Negeri 9 Padang (2018 - 2021)</p>
+                <p>SMP Negeri 31 Padang (2015 - 2018)</p>
+            </ul>
+        </div>
     </div>
     {{>footer}}
 </body>

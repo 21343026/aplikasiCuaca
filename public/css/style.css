@@ -14,22 +14,18 @@ body {
     flex-grow: 1;
 }
 
-h2 {
-    font-size: 1.5rem; 
-    margin-top: 1; 
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style: none; 
-    padding: 0; 
+.text {
+    margin-left: 20px;
 }
 
-ul p {
-    margin: 0; 
-}
-
-br {
-    margin-top: 2px; 
+.education {
+    margin-top: 20px;
 }
 
 footer{
