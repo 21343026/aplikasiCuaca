@@ -21,11 +21,11 @@ h2 {
 
 ul {
     list-style: none; 
-    padding: 1; /
+    padding: 10; 
 }
 
 ul p {
-    margin: 1; 
+    margin: 10; 
 }
 
 br {
