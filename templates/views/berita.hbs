@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Berita</title>
+    <link rel="icon" href="/img/cuaca.png">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <h2>{{judul}}</h2>
+        {{#if berita.length}}
+            <ul>
+                {{#each berita}}
+                    <li>
+                        <strong>{{title}}</strong><br>
+                        {{description}}<br>
+                        <a href="{{url}}" target="_blank">Baca selengkapnya</a>
+                    </li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>Tidak ada berita yang tersedia.</p>
+        {{/if}}
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>

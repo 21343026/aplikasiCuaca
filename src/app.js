@@ -5,6 +5,7 @@ const { error } = require('console')
 const forecast = require('./utils/prediksiCuaca')
 
 const app = express()
+const axios = require('axios');
 const port = process.env.PORT || 3000
 
 //Mendefinisikan jalur/path untuk konfigurasi express
@@ -72,6 +73,35 @@ app.get('/tentang', (req, res) =>{
         Nama : 'Indah Chania'
     })
 })
+
+//halaman berita
+app.get('/berita', (req, res) => {
+
+    axios.get('https://api.mediastack.com/v1/news', {
+        params: {
+            access_key: 'a3f483f912b4cb69ff55457fb4ea987a',
+            keywords: 'berita'
+        }
+    })
+    .then((response) => {
+        const berita = response.data.data;
+        
+        res.render('berita', {
+            judul: 'Berita',
+            Nama: 'Indah Chania',
+            berita: berita
+        });
+    })
+    .catch((error) => {
+        // Kesalahan ketika mengambil data berita dari API
+        console.error('Error:', error);
+        res.render('berita', {
+            judul: 'Berita',
+            Nama: 'Indah Chania',
+            berita: [] // Berita kosong
+        });
+    });
+});
 
 app.get('*', (req, res) => {
     res.render('404', {
