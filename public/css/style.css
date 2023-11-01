@@ -1,5 +1,6 @@
 body {
-    color: #333333;
+    background-color: #dfebf6;
+    color: #aac7d8;
     font-family: Arial, sans-serif;
     max-width: 650px;
     margin: 0 auto;
@@ -13,9 +14,9 @@ body {
     flex-grow: 1;
 }
 
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
+footer{
+    color:  #44576d;
+    border-top: 1px solid #aac7d8;
     margin-top: 16px;
     padding: 16px 0;
 }
@@ -33,7 +34,7 @@ h1 {
 }
 
 header a {
-    color: #888888;
+    color: #44576d;
     margin-right: 16px;
     text-decoration: none;
 }
@@ -44,7 +45,7 @@ header a {
 }
 
 input {
-    border: 2px solid #007BFF; /* Ubah warna border saat fokus */
+    border: 2px solid #768a76; /* Ubah warna border saat fokus */
     padding: 8px;
     margin: 8px 0;
     border-radius: 4px;
@@ -53,12 +54,12 @@ input {
 button {
     cursor: pointer;
     border: none;
-    background: #007BFF;
+    background: #44576d;
     color: white;
     padding: 10px 20px;
     border-radius: 4px;
 }
 
 button:hover {
-    background: #0056b3; /* Ubah warna saat mengarahkan kursor */
+    background: #44576d; /* Ubah warna saat mengarahkan kursor */
 }
